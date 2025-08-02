@@ -37,6 +37,29 @@ init_db()
 # Page config
 st.set_page_config(page_title="Multi-Model NLP App", page_icon="🤖", layout="wide")
 #css formatting
+# st.markdown(
+#     """
+#     <style>
+#     /* Sidebar background */
+#     [data-testid="stSidebar"] {
+#         background-color: #000080; 
+#     }
+
+#     /* Make all text in the sidebar white */
+#     [data-testid="stSidebar"] * {
+#         color: white !important;
+#     }
+
+#     /* Optional: change selectbox arrow color and border */
+#     [data-testid="stSidebar"] .stSelectbox, 
+#     [data-testid="stSidebar"] .stButton>button {
+#         color: white !important;
+#         border-color: white !important;
+#     }
+#     </style>
+#     """,
+#     unsafe_allow_html=True
+# )
 st.markdown(
     """
     <style>
@@ -45,8 +68,8 @@ st.markdown(
         background-color: #000080; 
     }
 
-    /* Make all text in the sidebar white */
-    [data-testid="stSidebar"] * {
+    /* Make all text in the sidebar white except buttons */
+    [data-testid="stSidebar"] *:not(button) {
         color: white !important;
     }
 
@@ -56,10 +79,25 @@ st.markdown(
         color: white !important;
         border-color: white !important;
     }
+
+    /* Custom button color inside feedback-box */
+    .feedback-box .stButton>button {
+        background-color: #ff4b4b !important;
+        color: white !important;
+        border-radius: 8px;
+        padding: 0.4em 1.2em;
+        border: none;
+        font-weight: bold;
+    }
+
+    .feedback-box .stButton>button:hover {
+        background-color: #ff0000 !important;
+    }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 # ----------------- SIDEBAR ------------------
 st.sidebar.title("🔍 More to do")
 page = st.sidebar.radio("Go to:", ["🏠 Home","📂 About Project", "🙋‍♀️ About Me", "📞 Contact Info"])
@@ -321,3 +359,4 @@ elif page == "📂 About Project":
 #     else:
 #         insert_feedback(name, rating, comments)
 #         st.sidebar.success("Thank you for your feedback! 🙌")
+
