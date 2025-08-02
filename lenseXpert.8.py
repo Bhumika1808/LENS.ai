@@ -1,9 +1,6 @@
 import streamlit as st
 import joblib
 import pandas as pd
-import requests
-import streamlit.components.v1 as components
-import streamlit.components.v1 as components
 
 spam_model=joblib.load("spam_classifier.pkl")
 language_model=joblib.load("lang_det2.pkl")
@@ -281,3 +278,4 @@ elif page == "📂 About Project":
     """)
 
  
+
