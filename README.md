@@ -10,8 +10,7 @@ An interactive Streamlit app that brings multiple NLP tasks into one fun interfa
 ## 🚀 Tech Stack
 - Python, Scikit-learn, Streamlit  
 - TfidfVectorizer, SMOTE, Naive Bayes, Logistic Regression  
-- SQLite 
-- Custom UI with glowing feedback box ✨
+- SQLite DB for storing feedback 
 ---
 ## 🎯 Features
 - Interactive predictions  
