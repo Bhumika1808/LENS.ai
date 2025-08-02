@@ -274,7 +274,7 @@ if page == "🏠 Home":
             #  email result function here
             #email_result_ui(df_review, label="📩 Mail Me the Detected Language Result", default_filename="detected_language_result.csv")
         st.markdown("""
-💡🟡 *Disclaimer: This model is still under training on data and might not provide accurate analysis. It's intended for educational and exploratory purposes.*
+💡 *Disclaimer: This model is trained on historical data and may not always provide accurate analysis. It's intended for educational and exploratory purposes.*
 """)
 
     ## tab4
@@ -359,4 +359,5 @@ elif page == "📂 About Project":
 #     else:
 #         insert_feedback(name, rating, comments)
 #         st.sidebar.success("Thank you for your feedback! 🙌")
+
 
